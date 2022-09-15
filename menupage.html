@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	body {
+			margin: 0; height: 100%; overflow: hidden;
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+			background-color: black;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+		
+	.showcase {
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		color: #fff;
+	}
+
+	.video-container video {
+		min-width: 100%;
+		min-height: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		object-fit: cover;
+	}
+
+	.video-container:after {
+		content: '';
+		z-index: 1;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		position: absolute;
+	}
+	
+	.linkedin {
+		z-index: 2;
+		position:relative;
+		top:0%;
+		float: left;
+		width: 33.33%;
+	}
+	.linkedinimg {
+		height: 55%;
+		width: 55%;
+	}
+	
+	.github {
+		z-index: 2;
+		position:relative;
+		top:0%;
+		float: left;
+		width: 33.33%;
+	}
+	.githubimg {
+		height: 55%;
+		width: 55%;
+	}
+	
+	.resume {
+		z-index: 2;
+		position:relative;
+		float: right;
+		width: 33.33%;
+		 top:0%;
+	}
+	.resumeimg {
+		height: 55%;
+		width: 55%;
+	}
+	
+	img:hover{
+		height: 57%;
+		width: 57%;
+	}
+	
+	h1{
+		z-index : 2;
+		color: white;
+		background-color: black;
+		text-align:center;
+		font-size:500%;
+		position:relative;
+		size: relative;
+	}
+	
+	
+	</style>
+	<title>Christian King</title>
+</head>
+<body>
+	<section class="showcase">
+	<div style="height: 100%; width:100%;">
+		<div style="float:top; width: 100%; height: 30%">
+			<h1>Hello, I'm Christian. Welcome to my site!</h1>
+		</div>
+		<div style="float:bottom; width: 100%; height:70%">
+			<div class="github">
+			<a href="https://www.github.com/JavaNoTea">
+				<img class="githubimg" src="github.png"/>
+			</a>
+			</div>
+			<div class="linkedin">
+			<a href="https://www.linkedin.com/in/christian-king-comp-sci">
+				<img class="linkedinimg" src="linkedin.png"/>
+			</a>
+			</div>
+			<div class="resume">
+			<a href="resume.pdf">
+				<img class="resumeimg" src="resume.png"/>
+			</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="video-container">
+		<video loop id="compvid" src="grid.mp4" autoplay muted></video>
+	</div>
+	
+	
+	</section>
+	
+	
+	<script>
+		video = document.getElementById('compvid');
+		video.addEventListener('ended',function() {       
+			window.location.href = 'menupage.html';
+		})
+	</script>
+</body>
+</html>

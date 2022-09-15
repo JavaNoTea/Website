@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	body{
+		margin: 0; height: 100%; width: 100%; overflow: hidden;
+		background-color: black;
+	}
+	
+	.showcase {
+		min-height: 100%;
+		min-width: 100%
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		color: #fff;
+		padding: 0 20px;
+		size: relative;
+		object-fit: fill;
+	}
+
+	.video-container video {
+		min-height: 99%;
+		max-height: 100%;
+		max-width: 99%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		object-fit: fill;
+	}
+
+	
+	</style>
+	<title>Welcome</title>
+</head>
+<body>
+	<section class="showcase">
+	<div class="video-container">
+		<video id="compvid" src="PhoneIntro.mp4" playsinline autoplay="autoplay" muted></video>
+	</div>
+	</section>
+	
+	<script>
+		video = document.getElementById('compvid');
+		video.addEventListener('ended',function() {       
+			window.location.href = 'mobilemenu.html';
+		})
+	</script>
+</body>
+</html>
